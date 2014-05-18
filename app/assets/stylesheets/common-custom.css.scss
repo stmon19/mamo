@@ -1,0 +1,125 @@
+// $very_light: rgba(160, 160, 160, .65);
+$light:       rgba(42, 42, 42, .80);
+$dark:        rgba(0, 0, 0, .70);
+
+$text_light:  rgb(220, 220, 220);
+$text_dark:   rgb(80, 80, 80);
+$text_strong: rgb(250, 70, 70);
+
+body{
+  background: url("1.jpg") repeat;
+}
+
+.topic{
+  padding: 40px 0 0;
+
+  .container{
+    color: $text_light;
+  }
+}
+
+.navbar-custom{
+  background-color: $light;
+
+  .nav{
+    li{
+      a{
+        display: block;
+        color: $text_light;
+      }
+      a:focus, 
+      a:hover{
+        color: $text_light;
+      }
+      a:active,
+      a.current{
+        border-bottom: 3px solid $text_strong;
+      }
+    }
+  }
+
+  .navbar-toggle{
+    position: relative;
+    background-color: #A9A9A9;
+    border-color: $text_dark;
+
+    .icon-bar{
+      background-color: $text_dark;
+    }
+  }
+
+  .navbar-toggle:hover,
+  .navbar-toggle:focus{
+    background-color: $text_light;
+    border-color: $text_dark;
+  }
+
+  .navbar-brand{
+
+    .title{
+      font-size: 25px;
+      color: $text_light;
+    }
+    .sub{
+      color: $text_strong;
+    }
+  }
+}
+
+.navbar-default .navbar-collapse {
+  border-color: #e7e7e7;
+}
+
+@media (max-width: 992px){
+  .navbar-custom .navbar-brand{
+    width: 300px;
+  }
+}
+@media (max-width: 767px){
+  .navbar-custom .navbar-nav > li > a:hover,
+  .navbar-custom .navbar-nav > li > a:focus {
+    color: #fff;
+    background-color: $text_light;
+  }
+  .navbar-custom{
+    .navbar-brand{
+      .sub{
+        display: none;
+      }
+    }
+  }
+}
+
+
+
+.site-footer{
+  border-top: none;
+  background-color: $light;
+
+  .title{
+    font-size: 25px;
+    color: $text_light;
+  }
+  .sub{
+    color: $text_strong;
+  }
+}
+
+@media (max-width: 767px) {
+  .site-footer{
+    .title{
+      color: $text_strong;
+    }
+    .sub{
+      display: none;
+    }
+  }
+}
+
+.jumbotron{
+  background-color: $dark;
+
+  .jumbotron-contents{
+    color: #A9A9A9;
+  }
+}

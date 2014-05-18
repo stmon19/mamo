@@ -1,0 +1,27 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @news.title
+p
+  strong Location:
+  = @news.location
+p
+  strong Location address:
+  = @news.location_address
+p
+  strong Content:
+  = @news.content
+p
+  strong Permalink:
+  = @news.permalink
+p
+  strong Start date:
+  = @news.start_date
+p
+  strong Close date:
+  = @news.close_date
+
+= link_to 'Edit', edit_news_path(@news)
+'|
+= link_to 'Back', news_index_path

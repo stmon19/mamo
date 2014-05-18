@@ -1,0 +1,13 @@
+ja:
+  activerecord:
+    models:
+      news: NEWS
+    attributes:
+      news:
+        title: タイトル
+        location: 場所
+        location_address: 住所
+        content: 内容
+        permalink: パーマリンク
+        start_date: 開始日
+        close_date: 終了日

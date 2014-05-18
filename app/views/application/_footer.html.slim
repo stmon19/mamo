@@ -1,0 +1,22 @@
+footer.site-footer
+  div.row
+    div.col-md-12
+      div.container
+        div.clearfix
+
+          div.footer-logo
+            p.title = t :footer_base, scope: [:page, :title]
+            p.sub   = t :official_web, scope: [:page, :title]
+        
+          dl.footer-nav
+            dt.nav-title = t :links, scope: :label
+            dd.nav-item
+              a.nav-link.current href="/news" = t :news, scope: [:page, :title]
+            dd.nav-item
+              a.nav-link href="/biography" = t :biography, scope: [:page, :title]
+            dd.nav-item
+              a.nav-link href="/contact" = t :contact, scope: [:page, :title]
+          dl.footer-nav
+            dt.nav-title = t :works, scope: [:page, :title]
+
+        div.footer-copyright.text-center = t :copyright, scope: :label

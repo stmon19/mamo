@@ -1,0 +1,23 @@
+nav.navbar.navbar-default.navbar-custom
+  div.container
+
+    header.navbar-header
+      button.navbar-toggle*{'data-toggle'=>"collapse", 'data-target'=>".navbar-collapse"}
+        span.sr-only test
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand href="/"
+        p.title = t :base, scope: [:page, :title]
+        p.sub   = t :sub, scope: [:page, :title]
+
+    div.collapse.navbar-collapse
+      ul.nav.navbar-nav.navbar-right
+        li
+          a.nav-link.current href="/news" = t :news, scope: [:page, :title]
+        li
+          a.nav-link href="/biography" = t :biography, scope: [:page, :title]
+        li
+          a.nav-link href="/works" = t :works, scope: [:page, :title]
+        li
+          a.nav-link href="/contact" = t :contact, scope: [:page, :title]
