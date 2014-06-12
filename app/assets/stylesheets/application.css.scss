@@ -11,8 +11,11 @@
  * file per style scope.
  *
  *= require bootflat
- *= require common
- *= require common-custom
- *= require_tree .
  *= require_self
  */
+
+@import "common.css.scss";
+@import "common-custom.css.scss";
+@import "common-header.css.scss";
+@import "common-footer.css.scss";
+@import "common-nav.css.scss";
