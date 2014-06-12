@@ -6,13 +6,13 @@ div.container
   div.row
     - @news.each_with_index do |news, i|
       div.col-md-6
-        = link_to news do
-          div.jumbotron
-            div.jumbotron-photo
-              - if (i % 2).zero?
-                = image_tag "4.jpg", {class: "img-rounded"}
-              - else
-                = image_tag "http://bootflat.github.io/img/thumbnail-1.jpg", {class: "img-rounded"}
+        div.jumbotron
+          div.jumbotron-photo
+            - if (i % 2).zero?
+              = image_tag "2.jpg", {class: "img-rounded"}
+            - else
+              = image_tag "1.jpg", {class: "img-rounded"}
+          = link_to news do
             div.jumbotron-contents
               h3 = news.title
               h4 = "#{format_default(news.start_date)}~#{format_default(news.close_date)}"

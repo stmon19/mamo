@@ -1,27 +1,17 @@
 p#notice = notice
 
-p
-  strong Title:
-  = @news.title
-p
-  strong Location:
-  = @news.location
-p
-  strong Location address:
-  = @news.location_address
-p
-  strong Content:
-  = @news.content
-p
-  strong Permalink:
-  = @news.permalink
-p
-  strong Start date:
-  = @news.start_date
-p
-  strong Close date:
-  = @news.close_date
 
-= link_to 'Edit', edit_news_path(@news)
-'|
-= link_to 'Back', news_index_path
+div.container
+  div.row
+    div.col-md-12
+      div.jumbotron
+        div.jumbotron-contents
+          h1 = @news.title
+          h4 = "#{format_default(@news.start_date)}~#{format_default(@news.close_date)}"
+          h4 = @news.location
+          p = @news.location_address
+          p = @news.content
+
+          = link_to 'Edit', edit_news_path(@news)
+          '|
+          = link_to 'Back', news_index_path
