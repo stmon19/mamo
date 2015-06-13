@@ -1,0 +1,23 @@
+.row
+  = form_for @biography do |f|
+    - if @biography.errors.any?
+      .col-md-12
+        .alert.alert-danger
+          ul
+            - @biography.errors.full_messages.each do |message|
+              li = message
+
+    .col-md-6
+      .jumbotron
+        .jumbotron-contents
+          .form-group
+            = f.label :year, class: "control-label"
+            = f.date_select :year, class: "form-control"
+          .form-group
+            = f.label :description, class: "control-label"
+            = f.text_area :description, {class: "form-control", size: "5"}
+          .form-group
+            = f.label :sort, class: "control-label"
+            = f.number_field :sort, class: "form-control"
+          .form-group
+            .actions = f.submit 'Save'

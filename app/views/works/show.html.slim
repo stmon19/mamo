@@ -1,0 +1,19 @@
+.topic
+  h1 = @work.title
+
+p#notice = notice
+
+.row
+  .col-md-12
+      .jumbotron
+        .jumbotron-contents
+          .text-center
+            = image_tag @work.image_url.to_s if @work.image_url.present?
+          .text-center
+            p = @work.description if @work.description.present?
+            p = "#{Work.human_attribute_name :width} : #{@work.width}" if @work.width.present?
+            p = "#{Work.human_attribute_name :height} : #{@work.height}" if @work.height.present?
+
+          = link_to 'Edit', edit_work_path(@work)
+          '|
+          = link_to 'Back', works_path

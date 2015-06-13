@@ -1,4 +1,4 @@
-class NewsController < ApplicationController
+class NewsController < BaseController
   before_action :set_news, only: [:show, :edit, :update, :destroy]
 
   # GET /news
@@ -53,6 +53,6 @@ class NewsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def news_params
-      params.require(:news).permit(:title, :location, :location_address, :content, :permalink, :start_date, :close_date)
+      params.require(:news).permit(:image, :title, :location, :location_address, :content, :permalink, :start_date, :close_date)
     end
 end

@@ -1,17 +1,20 @@
+.topic
+  h1 = @news.title
+
 p#notice = notice
 
+.row
+  .col-md-12
+    .jumbotron
+      .jumbotron-contents
+        .text-center
+          = image_tag @news.image_url.to_s if @news.image_url.present?
+        .text-center
+          h5 = "#{t :term, scope: :label} ： #{format_default(@news.start_date)}~#{format_default(@news.close_date)}"
+          p = "#{News.human_attribute_name :location} ； #{@news.location}"
+          p = "#{News.human_attribute_name :location_address} ； #{@news.location_address}"
+          p = "#{News.human_attribute_name :content} ； #{@news.content}"
 
-div.container
-  div.row
-    div.col-md-12
-      div.jumbotron
-        div.jumbotron-contents
-          h1 = @news.title
-          h4 = "#{format_default(@news.start_date)}~#{format_default(@news.close_date)}"
-          h4 = @news.location
-          p = @news.location_address
-          p = @news.content
-
-          = link_to 'Edit', edit_news_path(@news)
-          '|
-          = link_to 'Back', news_index_path
+        = link_to 'Edit', edit_news_path(@news)
+        '|
+        = link_to 'Back', news_path

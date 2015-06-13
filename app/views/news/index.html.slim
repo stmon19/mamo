@@ -1,20 +1,17 @@
-div.topic
-  div.container
-    h1 = t(:news, scope: [:page, :title])
+.topic
+  h1 = t :index, scope: [:page, :title, :news]
 
-div.container
-  div.row
-    - @news.each_with_index do |news, i|
-      div.col-md-6
-        div.jumbotron
-          div.jumbotron-photo
-            - if (i % 2).zero?
-              = image_tag "2.jpg", {class: "img-rounded"}
-            - else
-              = image_tag "1.jpg", {class: "img-rounded"}
-          = link_to news do
-            div.jumbotron-contents
-              h3 = news.title
-              h4 = "#{format_default(news.start_date)}~#{format_default(news.close_date)}"
-              h4 = news.location
-              p = news.location_address
+.row
+  - @news.each_with_index do |news, i|
+    .col-md-6
+      .jumbotron
+        .jumbotron-photo
+          = image_tag news.image_url.to_s, {class: "img-rounded"}
+        = link_to news do
+          .jumbotron-contents
+            h3 = news.title
+            h4 = "#{format_default(news.start_date)}~#{format_default(news.close_date)}"
+            h4 = news.location
+            p = news.location_address
+
+= link_to 'New News', new_news_path

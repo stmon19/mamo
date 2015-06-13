@@ -1,0 +1,14 @@
+div.topic
+  h1 = t :index, scope: [:page, :title, :biography]
+
+div.row
+  div.col-md-12
+    div.jumbotron
+      div.jumbotron-contents
+        - @biographies.each do |biography|
+          table
+            tr
+              td = "#{format_default_without_day biography.year}"
+              td = biography.description
+
+= link_to 'New Biography', new_biography_path

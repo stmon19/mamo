@@ -10,12 +10,12 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require bootflat
  *= require_self
  */
 
-@import "common.css.scss";
-@import "common-custom.css.scss";
-@import "common-header.css.scss";
-@import "common-footer.css.scss";
-@import "common-nav.css.scss";
+ @import "bootflat.css";
+ @import "common.css.scss";
+ @import "common-custom.css.scss";
+ @import "common-footer.css.scss";
+ @import "common-nav.css.scss";
+ @import "biographies.css.scss";

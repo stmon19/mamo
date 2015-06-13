@@ -1,0 +1,9 @@
+.topic
+  h1 = t :edit, scope: [:page, :title, :biography]
+
+== render 'form'
+
+= link_to 'Show', @biography
+'|
+= link_to 'Back', biographies_path
+

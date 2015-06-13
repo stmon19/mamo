@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+
+  root 'news#index'
+
+  resources :works do
+    collection do
+      # get '(/:year)', action: :selected
+    end
+  end
+
+  resources :biographies
+
   resources :news
 
   # The priority is based upon order of creation: first created -> highest priority.

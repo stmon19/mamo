@@ -11,9 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140518060036) do
+ActiveRecord::Schema.define(version: 20140619142300) do
+
+  create_table "biographies", force: true do |t|
+    t.date     "year"
+    t.text     "description"
+    t.integer  "sort"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "news", force: true do |t|
+    t.string   "image"
     t.string   "title"
     t.string   "location"
     t.text     "location_address"
@@ -21,6 +30,17 @@ ActiveRecord::Schema.define(version: 20140518060036) do
     t.string   "permalink"
     t.date     "start_date"
     t.date     "close_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "works", force: true do |t|
+    t.string   "image"
+    t.string   "year"
+    t.string   "title"
+    t.text     "description"
+    t.integer  "width"
+    t.integer  "height"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

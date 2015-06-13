@@ -2,8 +2,11 @@ ja:
   activerecord:
     models:
       news: NEWS
+      biography: BIOGRAPHY
+      work: WORK
     attributes:
       news:
+        image: 画像
         title: タイトル
         location: 場所
         location_address: 住所
@@ -11,3 +14,14 @@ ja:
         permalink: パーマリンク
         start_date: 開始日
         close_date: 終了日
+      biography:
+        year: year
+        description: description
+        sort: sort
+      work:
+        image: image
+        year: year
+        title: title
+        description: description
+        width: width
+        height: height

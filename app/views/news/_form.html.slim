@@ -1,30 +1,38 @@
-= form_for @news do |f|
-  - if @news.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@news.errors.count, "error")} prohibited this news from being saved:"
-      ul
-        - @news.errors.full_messages.each do |message|
-          li = message
+.row
+  = form_for @news do |f|
+    - if @news.errors.any?
+      .col-md-12
+        .alert.alert-danger
+          ul
+            - @news.errors.full_messages.each do |message|
+              li = message
 
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :location
-    = f.text_field :location
-  .field
-    = f.label :location_address
-    = f.text_area :location_address
-  .field
-    = f.label :content
-    = f.text_area :content
-  .field
-    = f.label :permalink
-    = f.text_field :permalink
-  .field
-    = f.label :start_date
-    = f.date_select :start_date
-  .field
-    = f.label :close_date
-    = f.date_select :close_date
-  .actions = f.submit 'Save'
+    .col-md-6
+      .jumbotron
+        .jumbotron-contents
+          .form-group
+            = f.label :image, class: "control-label"
+            = f.file_field :image 
+          .form-group
+            = f.label :title, class: "control-label"
+            = f.text_field :title, class: "form-control"
+          .form-group
+            = f.label :location, class: "control-label"
+            = f.text_field :location, class: "form-control"
+          .form-group
+            = f.label :location_address, class: "control-label"
+            = f.text_area :location_address, {class: "form-control", size: "5"}
+          .form-group
+            = f.label :content, class: "control-label"
+            = f.text_area :content, {class: "form-control", size: "10x10"}
+          .form-group
+            = f.label :permalink, class: "control-label"
+            = f.text_field :permalink, class: "form-control"
+          .form-group
+            = f.label :start_date, class: "control-label"
+            = f.date_select :start_date, class: "form-control"
+          .form-group
+            = f.label :close_date, class: "control-label"
+            = f.date_select :close_date, class: "form-control"
+          .form-group
+            .actions = f.submit 'Save'

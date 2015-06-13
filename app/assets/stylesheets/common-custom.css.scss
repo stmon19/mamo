@@ -3,6 +3,7 @@ $light:       rgba(42, 42, 42, .80);
 $dark:        rgba(0, 0, 0, .70);
 
 $text_light:  rgb(220, 220, 220);
+$text_highlight:  rgb(240, 240, 240);
 $text_dark:   rgb(80, 80, 80);
 $text_strong: rgb(250, 70, 70);
 
@@ -10,11 +11,12 @@ body{
   background: url("1.jpg") repeat;
 }
 
-.topic{
-  padding: 40px 0 0;
+.container{
+  color: $text_light;
 
-  .container{
-    color: $text_light;
+  .topic{
+    padding: 40px 0 0;
+
   }
 }
 
@@ -23,5 +25,16 @@ body{
 
   .jumbotron-contents{
     color: #A9A9A9;
+  }
+}
+
+.thumbnail{
+  background-color: $light;
+
+  .caption{
+    h3{
+      color: $text_strong;
+    }
+    color: $text_light;
   }
 }

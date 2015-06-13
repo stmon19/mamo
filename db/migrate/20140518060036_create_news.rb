@@ -1,6 +1,7 @@
 class CreateNews < ActiveRecord::Migration
   def change
     create_table :news do |t|
+      t.string :image
       t.string :title
       t.string :location
       t.text :location_address

@@ -1,0 +1,17 @@
+.topic
+  h1 = t :show, scope: [:page, :titile, :biography]
+
+p#notice = notice
+
+
+.row
+  .col-md-12
+    .jumbotron
+      .jumbotron-contents
+        p = "#{Biography.human_attribute_name :year} ： #{format_default_without_day(@biography.year)}"
+        p = "#{Biography.human_attribute_name :description} ； #{@biography.description}"
+        p = "#{Biography.human_attribute_name :sort} ； #{@biography.sort}"
+
+        = link_to 'Edit', edit_biography_path(@biography)
+        '|
+        = link_to 'Back', biographies_path

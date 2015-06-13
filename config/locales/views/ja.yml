@@ -1,14 +1,34 @@
 ja:
   label:
-    links: "LINKS"
-    copyright: "Copyright © 2016 MAMORU KONDO All rights reserved."
+    term: 期間
+    links: LINKS
+    copyright: Copyright © 2016 MAMORU KONDO All rights reserved.
   page:
     title:
-      base: "MAMORU KONDO OFFICIAL WEB"
-      sub: "Rock Paintings and Mixed with Animal Glue"
-      footer_base: "MAMORU KONDO"
-      official_web: "OFFICIAL WEB"
-      news: "NEWS"
-      biography: "BIOGRAPHY"
-      works: "WORKS"
-      contact: "CONTACT"
+      news: 
+        index: NEWS
+        new: NEWS 作成
+        edit: NEWS 編集
+        show: NEWS 詳細
+      biography: 
+        index: BIOGRAPHY
+        new: BIOGRAPHY 作成
+        edit: BIOGRAPHY 編集
+        show: BIOGRAPHY 詳細
+      work: 
+        index: WORKS
+        new: WORK 作成
+        edit: WORK 編集
+        show: WORK 詳細
+        selected: WORKS
+      contact: CONTACT
+  nav:
+    title: MAMORU KONDO OFFICIAL WEB
+    sub_title: Rock Paintings and Mixed with Animal Glue
+    news: NEWS
+    biography: BIOGRAPHY
+    work: WORKS
+    contact: CONTACT
+  footer:
+    title: MAMORU KONDO
+    split_title: OFFICIAL WEB

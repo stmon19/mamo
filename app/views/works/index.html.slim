@@ -1,0 +1,16 @@
+div.topic
+  h1 = t :index, scope: [:page, :title, :work]
+
+div.row
+  - @works.each do |work|
+    div.col-sm-6.col-md-3
+      = link_to work do
+        div.thumbnail
+          = image_tag work.image_url(:thumb).to_s if work.image_url.present?
+          div.caption.text-center
+            h3
+              = work.title.presence
+            p
+              = "#{Work.human_attribute_name :year} : #{work.year}" if work.year.present?
+
+= link_to 'New Work', new_work_path

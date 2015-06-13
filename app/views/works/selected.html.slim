@@ -1,0 +1,18 @@
+div.topic
+  h1 = t :work, scope: [:page, :title]
+
+div.row
+  - @works.each do |work|
+    div.col-sm-6.col-md-3
+      div.thumbnail
+        div.caption.text-center
+          h3
+            = work.title
+          p
+            = "#{Work.human_attribute_name :description} : #{work.description}" if work.description.present?
+          p
+            = "#{Work.human_attribute_name :width} : #{work.width}" if work.width.present?
+          p
+            = "#{Work.human_attribute_name :height} : #{work.height}" if work.height.present?
+
+= link_to 'New Work', new_work_path

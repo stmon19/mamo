@@ -6,13 +6,18 @@
     li{
       a{
         display: block;
+        opacity: .8;
         color: $text_light;
       }
-      a:focus, 
+      a:focus,
       a:hover{
-        color: $text_light;
+        color: $text_highlight;
+        opacity: .9;
+        transition: color .4s ease-in-out, opacity .4s ease-in-out;
       }
-      a:active,
+      a:active{
+        border: none;
+      }
       a.current{
         border-bottom: 3px solid $text_strong;
       }

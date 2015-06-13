@@ -5,18 +5,18 @@ footer.site-footer
         div.clearfix
 
           div.footer-logo
-            p.title = t :footer_base, scope: [:page, :title]
-            p.sub   = t :official_web, scope: [:page, :title]
+            p.title = t :title, scope: :footer
+            p.sub   = t :split_title, scope: :footer
         
           dl.footer-nav
             dt.nav-title = t :links, scope: :label
             dd.nav-item
-              a.nav-link.current href="/news" = t :news, scope: [:page, :title]
+              a.nav-link.current href="/news" = t :news, scope: :nav
             dd.nav-item
-              a.nav-link href="/biography" = t :biography, scope: [:page, :title]
+              a.nav-link href="/biographies" = t :biography, scope: :nav
             dd.nav-item
-              a.nav-link href="/contact" = t :contact, scope: [:page, :title]
+              a.nav-link href="/contacts" = t :contact, scope: :nav
           dl.footer-nav
-            dt.nav-title = t :works, scope: [:page, :title]
+            dt.nav-title = t :works, scope: :nav
 
         div.footer-copyright.text-center = t :copyright, scope: :label

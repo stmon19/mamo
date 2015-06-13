@@ -1,23 +1,18 @@
 nav.navbar.navbar-default.navbar-custom
   div.container
-
     header.navbar-header
       button.navbar-toggle*{'data-toggle'=>"collapse", 'data-target'=>".navbar-collapse"}
-        span.sr-only test
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
-      a.navbar-brand href="/"
-        p.title = t :base, scope: [:page, :title]
-        p.sub   = t :sub, scope: [:page, :title]
+      = link_to news_index_path, {class: "navbar-brand"} do
+        p.title = t :title, scope: :nav
+        p.sub   = t :sub_title, scope: :nav
 
     div.collapse.navbar-collapse
       ul.nav.navbar-nav.navbar-right
         li
-          a.nav-link.current href="/news" = t :news, scope: [:page, :title]
+          = link_to t(:news, scope: :nav), news_index_path, nav_class_name("news")
         li
-          a.nav-link href="/biography" = t :biography, scope: [:page, :title]
+          = link_to t(:biography, scope: :nav), biographies_path, nav_class_name("biographies")
         li
-          a.nav-link href="/works" = t :works, scope: [:page, :title]
+          = link_to t(:work, scope: :nav), works_path, nav_class_name("works")
         li
-          a.nav-link href="/contact" = t :contact, scope: [:page, :title]
+          a.nav-link href="/contact" = t :contact, scope: :nav
